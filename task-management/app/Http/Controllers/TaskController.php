@@ -12,7 +12,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(task::all());
     }
 
     /**
@@ -34,9 +34,10 @@ class TaskController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(task $task)
+    public function show($id)
     {
-        //
+        $task = task::find($id);
+        return response()->json($task);
     }
 
     /**

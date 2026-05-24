@@ -12,7 +12,8 @@ class PersonController extends Controller
      */
     public function index()
     {
-        //
+        $people = person::all();
+        return response()->json($people);
     }
 
     /**
@@ -34,9 +35,10 @@ class PersonController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(person $person)
+    public function show($id)
     {
-        //
+        $person = person::find($id);
+        return response()->json($person);
     }
 
     /**

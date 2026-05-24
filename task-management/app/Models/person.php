@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class person extends Model
 {
     protected $fillable = ['name', 'email', 'password'];
+    protected $hidden = ['password'];
 
     public function tasks()
     {
