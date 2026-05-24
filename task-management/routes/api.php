@@ -17,6 +17,6 @@ Route::get('/info', function (){
 
 Route::get('/people', [PersonController::class, 'index']);
 Route::get('/people/{id}', [PersonController::class, 'show']);
-
+Route::get('/people-with-tasks', [PersonController::class, 'peopleWithTasks']);
 Route::get('/tasks', [TaskController::class, 'index']);
 Route::get('/tasks/{id}', [TaskController::class, 'show']);

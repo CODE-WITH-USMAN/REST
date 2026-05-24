@@ -64,4 +64,13 @@ class PersonController extends Controller
     {
         //
     }
+
+    /**
+     * Return all the people along with there tasks using eager loading.
+     */
+    public function peopleWithTasks()
+    {
+        $people = person::with('tasks')->get();
+        return response()->json($people);
+    }
 }
